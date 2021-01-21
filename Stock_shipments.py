@@ -21,7 +21,7 @@ class Shipments:
                 row_counter += 1
 
     def sort_list_price(self):
-        for i in range(len(self.list_of_items)):
+        for i in range(1, len(self.list_of_items)):
             current_item = self.list_of_items[i]
             position = i
 
