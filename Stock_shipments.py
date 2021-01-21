@@ -10,7 +10,7 @@ class Shipments:
         self.shipments()
 
     def read_file(self):
-        with open('list_of_items.csv', 'r', encoding='Utf-8', errors='ignore') as file:
+        with open('list_of_items.csv', 'r', encoding='Utf-8') as file:
             rdr = csv.reader(file)
             row_counter = 0
             for row in rdr:
@@ -21,7 +21,7 @@ class Shipments:
                 row_counter += 1
 
     def sort_list_price(self):
-        for i in range(1, len(self.list_of_items)):
+        for i in range(len(self.list_of_items)):
             current_item = self.list_of_items[i]
             position = i
 
