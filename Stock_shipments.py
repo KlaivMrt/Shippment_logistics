@@ -6,7 +6,6 @@ class Shipments:
         self.volume = volume
         self.list_of_items = []
         self.read_file()
-        # self.make_int()
         self.sort_list_price()
         self.shipments()
 
@@ -20,18 +19,6 @@ class Shipments:
                 else:
                     self.list_of_items.append(row)
                 row_counter += 1
-
-    def make_int(self):
-        list = []
-        for i in range(1, len(self.list_of_items)):
-            l = []
-            for j in range(len(self.list_of_items[i])):
-                if j == 1 or j == 2:
-                    l.append(int(self.list_of_items[i][j]))
-                else:
-                    l.append(self.list_of_items[i][j])
-            list.append(l)
-        self.list_of_items = list
 
     def sort_list_price(self):
         for i in range(1, len(self.list_of_items)):
