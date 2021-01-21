@@ -1,5 +1,4 @@
 import csv
-import pandas as pd
 
 class Shipments:
     def __init__(self, volume):
