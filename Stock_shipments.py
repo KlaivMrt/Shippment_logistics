@@ -32,11 +32,12 @@ class Shipments:
 
         for i in self.list_of_items:
             print(i)
+        print(len(self.list_of_items))
 
     def shipments(self):
         list = []
         nr_shipments = 1
-        counter = 1
+        counter = 0
         repeat = True
 
         with open('shipments.csv', 'w', newline='') as file:
@@ -55,10 +56,10 @@ class Shipments:
                         writer.writerow(self.list_of_items[i])
                         volume = volume - int(self.list_of_items[i][1])
                         list.append(self.list_of_items[i])
-                    elif self.list_of_items[i] in list:
                         counter += 1
-                        if counter == len(self.list_of_items):
-                            repeat = False
+
+                if counter == len(self.list_of_items):
+                    repeat = False
 
                 nr_shipments += 1
 
