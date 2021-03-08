@@ -1,3 +1,4 @@
-This program sorts the items, of a CSV file, based on their price,
-
-returning an another CSV file listing all shipments based on a given volume. 
+This program enables you to select a CSV file that contains items along with their price
+and volume, sorts the items based on their volume and then outputs another CSV file in
+which the items have been grouped on shipments. Each shipment is organized based on 
+specific volume given from the user.
